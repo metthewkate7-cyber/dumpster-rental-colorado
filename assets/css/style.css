@@ -1,0 +1,130 @@
+/* Dumpster Rental Colorado — mobile-first, vanilla CSS. No frameworks. */
+:root{
+  --navy:#14324f; --navy-dark:#0d2236; --amber:#f59e0b; --amber-dark:#d97706;
+  --green:#1e7a4c; --ink:#1c2733; --muted:#5b6b7a; --line:#dfe6ec;
+  --bg:#ffffff; --soft:#f2f6f9; --soft2:#eaf1f6; --radius:12px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px}
+img{max-width:100%;height:auto;display:block;border-radius:var(--radius)}
+a{color:var(--navy);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3{color:var(--navy);line-height:1.25;margin:0 0 .6em}
+h1{font-size:1.9rem}
+h2{font-size:1.45rem;margin-top:1.6em}
+h3{font-size:1.15rem;margin-top:1.3em}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.3em}
+li{margin-bottom:.35em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.lede{font-size:1.12rem;color:#33465a}
+
+/* Header */
+.site-header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:50}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px}
+.brand{color:#fff;font-weight:800;font-size:1.15rem;line-height:1.15}
+.brand small{display:block;font-size:.72rem;font-weight:600;color:#bcd2e6;letter-spacing:.04em}
+.brand:hover{text-decoration:none}
+.main-nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.main-nav a{color:#dbe8f4;font-size:.92rem;font-weight:600;padding:8px 9px;border-radius:8px}
+.main-nav a:hover{background:rgba(255,255,255,.12);text-decoration:none}
+.main-nav .nav-cta{background:var(--amber);color:#231603}
+.main-nav .nav-cta:hover{background:var(--amber-dark);color:#fff}
+.nav-toggle{display:none;background:none;border:1px solid #4a6a86;color:#fff;border-radius:8px;padding:8px 12px;font-size:1rem;cursor:pointer}
+@media (max-width:760px){
+  .nav-toggle{display:block}
+  .main-nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding-bottom:8px}
+  .main-nav.open{display:flex}
+  .main-nav a{padding:10px 6px}
+  .site-header .wrap{flex-wrap:wrap}
+}
+
+/* Hero */
+.hero{background:linear-gradient(180deg,var(--navy) 0%,#1d4a70 100%);color:#fff;padding:34px 0 30px}
+.hero h1{color:#fff;margin-bottom:.4em}
+.hero .lede{color:#d6e5f2}
+.hero figure{margin:22px 0 0}
+.hero figcaption{color:#bcd2e6;font-size:.85rem;margin-top:8px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;background:var(--amber);color:#231603;font-weight:800;padding:13px 22px;border-radius:10px;border:0;cursor:pointer;font-size:1rem}
+.btn:hover{background:var(--amber-dark);color:#fff;text-decoration:none}
+.btn-ghost{display:inline-block;background:transparent;color:#fff;font-weight:700;padding:12px 20px;border-radius:10px;border:2px solid #fff;font-size:1rem}
+.btn-ghost:hover{text-decoration:none;background:rgba(255,255,255,.12)}
+.btn-ghost.dark{color:var(--navy);border-color:var(--navy)}
+.btn-ghost.dark:hover{background:var(--soft2)}
+
+/* Breadcrumbs */
+.crumbs{font-size:.88rem;color:var(--muted);padding:16px 0 0}
+.crumbs a{color:var(--navy)}
+
+/* Quick answer */
+.quick-answer{background:var(--soft2);border-left:5px solid var(--amber);border-radius:10px;padding:18px 20px;margin:22px 0}
+.quick-answer h2{margin-top:0}
+.quick-answer p:last-child{margin-bottom:0}
+
+/* Tables */
+table{width:100%;border-collapse:collapse;margin:0 0 1.2em;font-size:.95rem;display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{background:var(--navy);color:#fff}
+tr:nth-child(even) td{background:var(--soft)}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:1fr;gap:14px;margin:0 0 1.2em}
+.card{border:1px solid var(--line);border-radius:var(--radius);padding:18px;background:#fff}
+.card h3{margin-top:0}
+.card p:last-child{margin-bottom:0}
+.card .price{font-size:1.35rem;font-weight:800;color:var(--navy)}
+@media (min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+@media (min-width:900px){.cards{grid-template-columns:1fr 1fr 1fr}}
+
+/* FAQ */
+details{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:10px;background:#fff}
+details summary{font-weight:700;color:var(--navy);cursor:pointer;font-size:1.02rem}
+details p{margin:.7em 0 0}
+details p:last-child{margin-bottom:0}
+
+/* Forms and tools */
+.tool{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:var(--soft);margin:0 0 1.4em}
+.tool h2{margin-top:0}
+label{display:block;font-weight:700;margin:14px 0 6px}
+input[type=text],input[type=tel],input[type=date],select,textarea{width:100%;padding:12px;border:1px solid #b9c6d2;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff}
+textarea{resize:vertical}
+.result-box{border:2px solid var(--green);background:#eef7f1;border-radius:10px;padding:16px 18px;margin-top:16px}
+.result-box h3{margin-top:0}
+.notice{background:#fff7e0;border:1px solid #f0d48a;border-radius:8px;padding:12px 14px}
+.steps{list-style:none;display:flex;gap:8px;padding:0;margin:0 0 16px;flex-wrap:wrap}
+.steps li{background:#dbe5ee;color:var(--navy);border-radius:20px;padding:6px 14px;font-size:.88rem;font-weight:700}
+.steps li.active{background:var(--amber);color:#231603}
+.step-panel{display:none}
+.step-panel.active{display:block}
+.size-pick{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 10px}
+.size-pick button{border:2px solid var(--line);background:#fff;border-radius:10px;padding:14px 10px;font-size:1rem;font-weight:700;cursor:pointer;color:var(--navy)}
+.size-pick button.selected{border-color:var(--amber);background:#fff7e0}
+.size-pick small{display:block;font-weight:500;color:var(--muted)}
+@media (min-width:640px){.size-pick{grid-template-columns:repeat(5,1fr)}}
+
+/* Trust / check lists */
+.checks{list-style:none;padding:0}
+.checks li{padding-left:28px;position:relative;margin-bottom:.55em}
+.checks li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+
+/* Footer */
+.site-footer{background:var(--navy-dark);color:#c7d6e4;margin-top:44px;padding:34px 0 90px}
+.site-footer h3{color:#fff;font-size:1rem}
+.site-footer a{color:#c7d6e4}
+.site-footer .cols{display:grid;grid-template-columns:1fr;gap:26px}
+.site-footer p{font-size:.94rem}
+@media (min-width:760px){.site-footer .cols{grid-template-columns:1.3fr 1fr 1fr}}
+
+/* Sticky mobile bar */
+.sticky-bar{position:fixed;left:0;right:0;bottom:0;display:flex;z-index:60;box-shadow:0 -2px 12px rgba(0,0,0,.2)}
+.sticky-bar a{flex:1;text-align:center;padding:14px 8px;font-weight:800;font-size:1.02rem}
+.sticky-bar a:hover{text-decoration:none}
+.sticky-bar .call{background:#fff;color:var(--navy)}
+.sticky-bar .book{background:var(--amber);color:#231603}
+@media (min-width:760px){.sticky-bar{display:none}.site-footer{padding-bottom:34px}}
+
+.updated{font-size:.86rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;margin-top:28px}
+@media (min-width:900px){h1{font-size:2.4rem}body{font-size:17.5px}}

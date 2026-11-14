@@ -128,3 +128,31 @@ textarea{resize:vertical}
 
 .updated{font-size:.86rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px;margin-top:28px}
 @media (min-width:900px){h1{font-size:2.4rem}body{font-size:17.5px}}
+
+/* Kitchen-style header dropdowns + two-column hero */
+.main-nav .drop-btn{background:none;border:0;color:#dbe8f4;font-size:.92rem;font-weight:600;padding:8px 9px;border-radius:8px;cursor:pointer;font-family:inherit}
+.main-nav .drop-btn:hover{background:rgba(255,255,255,.12)}
+.main-nav .drop-btn::after{content:" \25BE";font-size:.8em}
+.main-nav .nav-call{color:#fff;border:1px solid #6f93b3}
+.main-nav .nav-call:hover{background:rgba(255,255,255,.12);text-decoration:none}
+.has-drop{position:relative}
+.drop{display:none;min-width:260px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 30px rgba(13,34,54,.25);padding:6px;z-index:60}
+.drop a{display:block;color:var(--navy);font-size:.92rem;font-weight:600;padding:9px 12px;border-radius:7px}
+.drop a:hover{background:var(--soft2);text-decoration:none}
+.has-drop.open .drop{display:block}
+.hero-pill{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.45);color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:6px 13px;border-radius:999px;margin:0 0 14px}
+.hero-grid{display:grid;gap:26px;align-items:center}
+.hero-grid figure{margin:0}
+@media (min-width:761px){
+  .hero-grid{grid-template-columns:1.05fr .95fr}
+  .hero{padding:44px 0 40px}
+  .drop{position:absolute;top:100%;left:0}
+  .has-drop:hover .drop,.has-drop:focus-within .drop{display:block}
+}
+@media (max-width:760px){
+  .has-drop{width:100%}
+  .main-nav .drop-btn{width:100%;text-align:left;padding:10px 6px;color:#dbe8f4}
+  .drop{position:static;min-width:0;background:transparent;border:0;box-shadow:none;padding:0 0 4px 14px}
+  .drop a{color:#dbe8f4;padding:9px 6px}
+  .drop a:hover{background:rgba(255,255,255,.08)}
+}

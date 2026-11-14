@@ -36,3 +36,9 @@
 - Footer placeholder inconsistency: service agent used hyphen "[COLORADO SPRINGS ADDRESS - TO BE CONFIRMED]" on 16 pages; rest of site uses em-dash token as written in TEMPLATE.md. Normalize site-wide in final QA.
 - Contact form has no backend (anchor to thank-you note). Needs a form endpoint (Cloudflare Pages Function / Formspree-style) before launch.
 - Region gap in TEMPLATE.md (Commerce City, Burlington, Limon missing from region lists) — core agent assigned Commerce City→Denver Metro, Burlington+Limon→Northern Colorado.
+
+## 2026-11-14 — Kitchen-style header + hero redesign (Colorado only)
+- Header replaced on all 115 pages (scripted pass): Services dropdown (5 sizes + 8 service pages + prices hub, 14 links), Service Areas dropdown (top 8 cities + All 72 Cities, 9 links), Guides dropdown (all 11 guides), plus Prices, FAQ, Contact, Call [PHONE], amber Book now CTA. Dropdowns: desktop hover/click, mobile hamburger accordion, aria-expanded, Escape/outside-click close.
+- Homepage hero rebuilt as two columns (desktop): pill "Serving All of Colorado", H1 unchanged, 51-word subtext, CTAs Book your dumpster / Call [PHONE] / Browse Service Areas, existing hero image right at ~45% width, estimator directly below hero.
+- Verified in headless Chromium (1280px + 390px): 10/10 loads HTTP 200, 0 console errors, 0 failed requests, 0 horizontal overflow, all 34 dropdown links HTTP 200, estimator works, JSON-LD valid 115/115, homepage head hash byte-identical to pre-change. Screenshots in /tmp/co-verify/.
+- No body copy, schema, sitemap, robots, redirects, or images changed. No invented business details. Indiana site untouched. Not pushed (no GitHub login on VM).

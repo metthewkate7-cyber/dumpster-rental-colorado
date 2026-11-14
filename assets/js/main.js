@@ -13,8 +13,43 @@
     btn.textContent = "Menu";
     var brand = header.querySelector(".brand");
     if (brand) brand.after(btn);
-    btn.addEventListener("click", function () { nav.classList.toggle("open"); });
+    btn.addEventListener("click", function () {
+      nav.classList.toggle("open");
+      document.querySelectorAll(".has-drop.open").forEach(function (o) {
+        o.classList.remove("open");
+        var b = o.querySelector(".drop-btn");
+        if (b) b.setAttribute("aria-expanded", "false");
+      });
+    });
   }
+
+  /* Header dropdowns: click/tap toggle, outside click + Escape to close */
+  document.querySelectorAll(".has-drop").forEach(function (wrap) {
+    var btn = wrap.querySelector(".drop-btn");
+    if (!btn) return;
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var wasOpen = wrap.classList.contains("open");
+      document.querySelectorAll(".has-drop.open").forEach(function (o) {
+        o.classList.remove("open");
+        var b = o.querySelector(".drop-btn");
+        if (b) b.setAttribute("aria-expanded", "false");
+      });
+      if (!wasOpen) {
+        wrap.classList.add("open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+  function closeDrops() {
+    document.querySelectorAll(".has-drop.open").forEach(function (o) {
+      o.classList.remove("open");
+      var b = o.querySelector(".drop-btn");
+      if (b) b.setAttribute("aria-expanded", "false");
+    });
+  }
+  document.addEventListener("click", closeDrops);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeDrops(); });
 
   /* Estimator: job + heavy debris -> size recommendation */
   var est = document.getElementById("estimator");

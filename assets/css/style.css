@@ -157,3 +157,7 @@ textarea{resize:vertical}
   .drop a{color:#dbe8f4;padding:9px 6px}
   .drop a:hover{background:rgba(255,255,255,.08)}
 }
+
+/* Team */
+.team img{width:100%;height:auto;border-radius:10px;display:block;margin-bottom:12px}
+@media (min-width:900px){.team{grid-template-columns:repeat(4,1fr)}}

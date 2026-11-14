@@ -34,7 +34,7 @@ li{margin-bottom:.35em}
 .main-nav .nav-cta:hover{background:var(--amber-dark);color:#fff}
 .nav-toggle{display:none;background:none;border:1px solid #4a6a86;color:#fff;border-radius:8px;padding:8px 12px;font-size:1rem;cursor:pointer}
 @media (max-width:760px){
-  .nav-toggle{display:block}
+  .nav-toggle{display:inline-flex;align-items:center;gap:7px}
   .main-nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding-bottom:8px}
   .main-nav.open{display:flex}
   .main-nav a{padding:10px 6px}
@@ -133,7 +133,7 @@ textarea{resize:vertical}
 /* Kitchen-style header dropdowns + two-column hero */
 .main-nav .drop-btn{background:none;border:0;color:#dbe8f4;font-size:.92rem;font-weight:600;padding:8px 9px;border-radius:8px;cursor:pointer;font-family:inherit}
 .main-nav .drop-btn:hover{background:rgba(255,255,255,.12)}
-.main-nav .drop-btn::after{content:" \25BE";font-size:.8em}
+.main-nav .drop-btn::after{content:"";display:inline-block;width:7px;height:7px;border-right:2px solid #dbe8f4;border-bottom:2px solid #dbe8f4;transform:rotate(45deg);margin:0 0 2px 7px}
 .main-nav .nav-call{color:#fff;border:1px solid #6f93b3}
 .main-nav .nav-call:hover{background:rgba(255,255,255,.12);text-decoration:none}
 .has-drop{position:relative}
@@ -161,3 +161,9 @@ textarea{resize:vertical}
 /* Team */
 .team img{width:100%;height:auto;border-radius:10px;display:block;margin-bottom:12px}
 @media (min-width:900px){.team{grid-template-columns:repeat(4,1fr)}}
+
+/* Bigger homepage hero */
+.hero-home{padding:52px 0 44px}
+.hero-home h1{font-size:2.5rem;line-height:1.08}
+@media (min-width:761px){.hero-home{padding:72px 0 64px}}
+@media (min-width:900px){.hero-home h1{font-size:3.4rem}}

@@ -10,7 +10,7 @@
     btn.className = "nav-toggle";
     btn.type = "button";
     btn.setAttribute("aria-label", "Menu");
-    btn.textContent = "Menu";
+    btn.innerHTML = '<svg width="18" height="14" viewBox="0 0 18 14" aria-hidden="true" focusable="false"><path d="M1 1h16M1 7h16M1 13h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Menu';
     var brand = header.querySelector(".brand");
     if (brand) brand.after(btn);
     btn.addEventListener("click", function () {

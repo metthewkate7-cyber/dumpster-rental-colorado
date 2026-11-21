@@ -46,6 +46,8 @@ li{margin-bottom:.35em}
   .site-header .wrap{flex-wrap:wrap}
   .brand{font-size:1rem;gap:8px}
   .brand-icon{width:32px;height:32px}
+  .site-header .wrap{gap:8px}
+  .nav-toggle{padding:8px 10px}
 }
 
 /* Hero */

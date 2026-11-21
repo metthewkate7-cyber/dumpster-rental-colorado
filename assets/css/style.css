@@ -184,6 +184,9 @@ textarea{resize:vertical}
 .btn-pill{background:var(--green);color:#fff;border-radius:999px;font-weight:700}
 .btn-pill:hover{background:#16603b;color:#fff;text-decoration:none}
 .hero-home .wrap{width:100%}
+.fig-center{margin:28px auto;max-width:760px}
+.fig-center img{display:block;width:100%;height:auto;border-radius:12px}
 @media (min-width:761px){.hero-home{padding:72px 0 64px}}
-@media (min-width:761px){.hero-home .hero-grid{grid-template-columns:.92fr 1.08fr}.hero-home .hero-grid figure{margin-top:26px}}
+@media (min-width:900px){.hero-home{padding-bottom:198px}}
+@media (min-width:761px){.hero-home .hero-grid{grid-template-columns:.88fr 1.12fr}.hero-home .hero-grid figure{margin-top:26px}.hero-home figure img{aspect-ratio:4/3;object-fit:cover}}
 @media (min-width:900px){.hero-home h1{font-size:3.4rem}}

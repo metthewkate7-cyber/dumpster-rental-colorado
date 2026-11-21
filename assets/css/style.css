@@ -174,10 +174,15 @@ textarea{resize:vertical}
 @media (min-width:900px){.team{grid-template-columns:repeat(4,1fr)}}
 
 /* Bigger homepage hero */
-.hero-home{background:#f2fdf5;color:var(--ink);min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:52px 0 44px}
+.hero-home{background:#eaf1f6;color:var(--ink);min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:52px 0 44px}
 .hero-home h1{color:var(--navy);font-size:2.5rem;line-height:1.08}
 .hero-home .lede{color:#33465a}
 .hero-home figcaption{color:var(--muted)}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:#e2f3e8;border:1px solid #bfe3c9;color:#3d8f57;border-radius:999px;font-size:.85rem;font-weight:700;padding:.45rem 1rem;margin-bottom:1.1rem}
+.hero-badge .dot{width:.5rem;height:.5rem;border-radius:50%;background:#4da768;flex:none}
+.hero-book{font-weight:700}
+.btn-pill{background:var(--green);color:#fff;border-radius:999px;font-weight:700}
+.btn-pill:hover{background:#16603b;color:#fff;text-decoration:none}
 .hero-home .wrap{width:100%}
 @media (min-width:761px){.hero-home{padding:72px 0 64px}}
 @media (min-width:761px){.hero-home .hero-grid{grid-template-columns:.92fr 1.08fr}.hero-home .hero-grid figure{margin-top:26px}}

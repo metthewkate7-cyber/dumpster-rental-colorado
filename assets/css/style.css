@@ -24,14 +24,19 @@ li{margin-bottom:.35em}
 /* Header */
 .site-header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:50}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px}
-.brand{color:#fff;font-weight:800;font-size:1.15rem;line-height:1.15}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:1.15rem;line-height:1.15}
+.brand-icon{flex:none}
 .brand small{display:block;font-size:.72rem;font-weight:600;color:#bcd2e6;letter-spacing:.04em}
 .brand:hover{text-decoration:none}
-.main-nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.main-nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap;justify-content:center;flex:1}
 .main-nav a{color:#dbe8f4;font-size:.92rem;font-weight:600;padding:8px 9px;border-radius:8px}
 .main-nav a:hover{background:rgba(255,255,255,.12);text-decoration:none}
 .main-nav .nav-cta{background:var(--amber);color:#231603}
 .main-nav .nav-cta:hover{background:var(--amber-dark);color:#fff}
+.header-call{display:none;align-items:center;gap:8px;background:var(--green);color:#fff;font-weight:800;padding:11px 20px;border-radius:999px;white-space:nowrap}
+.header-call:hover{background:#16603b;color:#fff;text-decoration:none}
+.header-call svg{flex:none}
+@media (min-width:761px){.header-call{display:inline-flex}}
 .nav-toggle{display:none;background:none;border:1px solid #4a6a86;color:#fff;border-radius:8px;padding:8px 12px;font-size:1rem;cursor:pointer}
 @media (max-width:760px){
   .nav-toggle{display:inline-flex;align-items:center;gap:7px}
@@ -163,7 +168,11 @@ textarea{resize:vertical}
 @media (min-width:900px){.team{grid-template-columns:repeat(4,1fr)}}
 
 /* Bigger homepage hero */
-.hero-home{padding:52px 0 44px}
-.hero-home h1{font-size:2.5rem;line-height:1.08}
+.hero-home{background:#f2fdf5;color:var(--ink);min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:52px 0 44px}
+.hero-home h1{color:var(--navy);font-size:2.5rem;line-height:1.08}
+.hero-home .lede{color:#33465a}
+.hero-home figcaption{color:var(--muted)}
+.hero-home .wrap{width:100%}
 @media (min-width:761px){.hero-home{padding:72px 0 64px}}
+@media (min-width:761px){.hero-home .hero-grid{grid-template-columns:.92fr 1.08fr}.hero-home .hero-grid figure{margin-top:26px}}
 @media (min-width:900px){.hero-home h1{font-size:3.4rem}}
